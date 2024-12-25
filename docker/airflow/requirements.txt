@@ -1,0 +1,10 @@
+apache-airflow-providers-google
+apache-airflow-providers-amazon
+boto3
+pandas
+pandas-gbq
+requests
+pyarrow
+openpyxl
+scikit-learn
+mlflow

@@ -1,5 +1,3 @@
-![Banner](./docs/img/project_banner.png)
-
 # mlflow-setup
 
 This repository contains the code for setting up MLFlow Tracking Server with PostgreSQL as backend and MinIO as artifact store, using docker-compose.
@@ -22,5 +20,3 @@ If everything is setup properly, you should be able to access the services at th
 
 - MLFlow Tracking Server: [http://localhost:5001](http://localhost:5001)
 - MinIO Console UI: [http://localhost:9001](http://localhost:9001)
-
-![Screenshots](./docs/img/minio_mlflow_screenshot.png)

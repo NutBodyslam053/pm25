@@ -5,7 +5,7 @@ import mlflow
 import mlflow.sklearn
 from mlflow.models import infer_signature
 
-mlflow.set_tracking_uri("http://localhost:5001")
+mlflow.set_tracking_uri("http://localhost:5000")
 
 if __name__ == "__main__":
     with mlflow.start_run():

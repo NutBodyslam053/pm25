@@ -5,7 +5,7 @@ install:
 	docker compose \
 		--env-file $(DOCKER_DIR)/.env \
 		--file $(COMPOSE_FILE) \
-		up --detach
+		up --detach --build
 
 test:
 	python3 -m venv .venv && source .venv/bin/activate
@@ -15,6 +15,6 @@ test:
 clean:
 	(cd docker/; docker compose down; cd ..;)
 
-	rm -rf .venv
+	# rm -rf .venv
 
 all: install test
