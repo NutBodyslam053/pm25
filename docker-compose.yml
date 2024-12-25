@@ -22,7 +22,7 @@ x-airflow-common:
     _PIP_ADDITIONAL_REQUIREMENTS: ${_PIP_ADDITIONAL_REQUIREMENTS:-}
     AIRFLOW_CONFIG: '/opt/airflow/config/airflow.dev.cfg'
   env_file:
-    - env/dev.env
+    - .env
   volumes:
     - ${AIRFLOW_PROJ_DIR:-..}/config:/opt/airflow/config
     - ${AIRFLOW_PROJ_DIR:-..}/dags:/opt/airflow/dags
