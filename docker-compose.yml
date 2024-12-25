@@ -2,7 +2,7 @@ x-airflow-common:
   &airflow-common
   image: cdp-airflow:2.10.0
   build:
-    context: ./airflow
+    context: .docker/airflow
     dockerfile: Dockerfile
     # platforms:
     #   - "linux/amd64"
@@ -171,7 +171,7 @@ services:
       POSTGRES_DB: ${POSTGRES_DB}
     volumes:
       - postgres_data:/var/lib/postgresql/data
-      - ./postgres/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - .docker/postgres/init.sql:/docker-entrypoint-initdb.d/init.sql
     restart: always
 
   minio:
@@ -203,7 +203,7 @@ services:
       minio:
         condition: service_healthy
     volumes:
-      - ./minio/create-bucket.sh:/create-bucket.sh
+      - .docker/minio/create-bucket.sh:/create-bucket.sh
     entrypoint: /bin/sh
     command: -c "chmod +x /create-bucket.sh && /create-bucket.sh"
     environment:
@@ -212,7 +212,7 @@ services:
 
   mlflow:
     build:
-      context: ./mlflow
+      context: .docker/mlflow
       dockerfile: Dockerfile
     container_name: mlflow-server
     depends_on:

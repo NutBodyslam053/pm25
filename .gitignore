@@ -91,3 +91,8 @@ ENV/
 # Data
 data/raw/*
 !data/raw/.gitkeep
+
+# Airflow
+docker/logs
+docker/config
+docker/secrets
