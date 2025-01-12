@@ -8,3 +8,6 @@ pyarrow
 openpyxl
 scikit-learn
 mlflow
+duckdb
+tensorflow
+s3fs
